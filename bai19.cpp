@@ -5,24 +5,12 @@ int main()
     printf("nhap so n: ");
     scanf("%d",&n);
     float arr[n];
-    for (int i = 0; i < n; i++)
-    {
-        scanf("%f",&arr[i]);
-    }
+    for (int i = 0; i < n; i++) scanf("%f",&arr[i]);
     float max=arr[0], min=arr[0];
     for (int i = 0; i < n; i++)
     {
-        
-        if(arr[i]<=min) 
-        {
-            min=arr[i];
-            //dirmin=i+1;
-        }
-        if(arr[i]>=max)
-        {
-            max=arr[i]; 
-            //dirmax=i+1;
-        }
+        if(arr[i]<=min) min=arr[i];
+        if(arr[i]>=max) max=arr[i]; 
     }
     //hien thi so lon nhat va be nhat cua day
     printf("so lon nhat trong day la: %.3f\n",max);
@@ -44,6 +32,5 @@ int main()
             printf("vi tri so lon nhat trong day la: %d\n",dirmax);
         }
     }
-    
     return 0;
 }
