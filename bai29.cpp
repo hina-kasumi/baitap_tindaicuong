@@ -30,15 +30,15 @@ int main()
             trungbinh=1.0*(day[dem1]+day[dem2])/2;
             for (int dem3 = 0; dem3 < phantu; dem3++)
             {
-                if (trungbinh==day[dem3])
+                if (dem1!=dem2 && dem1!=dem3 && dem3!=dem2)
                 {
-                    printf("\ncap so cong cua day la: (%d, %d, %d)", day[dem1],day[dem3],day[dem2]);
-                }
-                
-            }
-            
+                    if (trungbinh==day[dem3])
+                    {
+                        printf("(%d,%d,%d)\n",day[dem1],day[dem3],day[dem2]);
+                    }   
+                }   
+            }    
         }
-        
     }
     return 0;
 }

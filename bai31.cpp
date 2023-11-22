@@ -12,17 +12,18 @@ int main()
         scanf("%d",&day[dem1]);
     }
     //in cac so duong le 
-    printf("cac so le am trong day la: \n");
+    printf("cac so le duong trong day la: \n");
     for (int dem1 = 0; dem1 < phantu; dem1++)
     {
-        if (day[dem1]<0 && day[dem1]%2!=0)
+        if (day[dem1]>0 && day[dem1]%2!=0)
         {
-            printf("%d",day[dem1]);
+            printf("%d ",day[dem1]);
         }
     }
-
+    printf("\n");
     //in 3 so lien tiep tao thanh cap so cong
     float trungbinh;
+    int check=0;
     for (int dem1 = 0; dem1 < phantu; dem1++)
     {
         for (int dem2 = dem1+1; dem2 < phantu; dem2++)
@@ -30,18 +31,28 @@ int main()
             trungbinh=1.0*(day[dem1]+day[dem2])/2;
             for (int dem3 = 0; dem3 < phantu; dem3++)
             {
-                if (trungbinh==day[dem3] && day[dem1]<day[dem2])
+                if (dem1!=dem2 && dem1!=dem3 && dem3!=dem2)
                 {
-                    printf("\ncap so cong cua day la: (%d, %d, %d)", day[dem1],day[dem3],day[dem2]);
-                }
-                if (trungbinh==day[dem3] && day[dem1]>day[dem2])
-                {
-                    printf("\ncap so cong cua day la: (%d, %d, %d)", day[dem2],day[dem3],day[dem1]);
-                }
-            }
-            
+                    if (trungbinh==day[dem3])
+                    {
+                        if (day[dem1]<day[dem2])
+                        {
+                            printf("(%d,%d,%d)\n",day[dem1],day[dem3],day[dem2]);
+                        }
+                        if (day[dem1]>day[dem2])
+                        {
+                            printf("(%d,%d,%d)\n",day[dem2],day[dem3],day[dem1]);
+                        }
+                        if (day[dem1]==day[dem2] && check==0)
+                        {
+                            printf("(%d,%d,%d)\n",day[dem1],day[dem3],day[dem2]);
+                            check++;
+                        }
+                        
+                    }   
+                }   
+            }    
         }
-        
     }
     return 0;
 }
