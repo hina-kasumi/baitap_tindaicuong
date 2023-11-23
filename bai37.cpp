@@ -13,13 +13,16 @@ int main()
     {
         scanf("%d",&arr[i]);
     }
+    int check=0;
     for (i = 1; i < n; i++)
     {
-        if (arr[i]<arr[i-1])
+        if (arr[i]>arr[i-1])
         {
-            
-        } 
+            printf("day khong phai day giam. ");
+            check++;
+            break;
+        }
     }
-    
+    if (check==0) printf("day la day giam thuc su. ");
     return 0;
 }
