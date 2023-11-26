@@ -12,7 +12,7 @@ int main()
     for (i=0;i<=n;i++) scanf("%f",&heso[i]);
     //in he so da thuc tren mot dong
     printf("he so cua da thuc la: ");
-    for (i=0;i<=n;i++) printf("%.2f",heso[i]);
+    for (i=0;i<=n;i++) printf("%.2f ",heso[i]);
     //Đếm rồi in ra màn hình số các hệ số có giá trị bằng 0.
     int dem=0;
     for (i=0;i<=n;i++) if(heso[i]==0) dem++;
