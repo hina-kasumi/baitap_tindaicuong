@@ -35,7 +35,7 @@ int main()
     dem=0;
     for (int i = 0; i < hang; i++)
     {
-        if (toado[i][x]>0 && toado[i][y]>0 && toado[i][x]<toado[i][y])
+        if (toado[i][x]<toado[i][y])
         {
             printf("toa do tren duong phan giac goc phan tu thu 1 la: (%f,%f)\n",toado[i][x],toado[i][y]);
             dem++;
