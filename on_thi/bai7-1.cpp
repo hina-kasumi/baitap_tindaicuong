@@ -37,26 +37,37 @@ main()
     printf("khong\n");
     //2,
     skip: int gioi_han=3;
-    int max1=arr[0],min=arr[0],max[gioi_han];
+    int clone[gioi_han];
     for (int i = 0; i < n; i++)
     {
-        max1=(max1<arr[i])? arr[i]:max1;
-        min=(min>arr[i])? arr[i]:min;
+        clone[i]=arr[i];
     }
-    for (int i = 1; i < gioi_han; i++)
+    for (int i = 0; i < n-1; i++)
     {
-        max[i]=min;
+        for (int j = i+1; j < n; j++)
+        {
+            if (clone[i]<clone[j])
+            {
+                int tmp = clone[i];
+                clone[i] = clone[j];
+                clone[j] = tmp;
+            }
+        }
     }
-    max[0]=max1;
-    printf("gia tri lon thu 1 la: %d\n",max1);
+    int max[gioi_han]= {clone[0]};
+    printf("gia tri lon nhat thu 1 la %d\n",max[0]);
     for (int i = 1; i < gioi_han; i++)
     {
         for (int j = 0; j < n; j++)
         {
-            if (max[i]<arr[j])max[i]=arr[j];
-            if(max[i]>=max[i-1]) max[i]=min;
+            if (clone[j]<max[i-1])
+            {
+                max[i]=clone[j];
+                break;
+            }
         }
-        printf("gia tri lon thu %d la: %d\n",i+1,max[i]);
+        printf("gia tri lon nhat thu %d la %d\n", i+1,max[i]);
     }
+    
     
 }
