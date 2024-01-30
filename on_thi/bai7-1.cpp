@@ -68,6 +68,4 @@ main()
         }
         printf("gia tri lon nhat thu %d la %d\n", i+1,max[i]);
     }
-    
-    
 }
