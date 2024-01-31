@@ -109,20 +109,22 @@ int main()
     }
     nn;
     //3,
-    int check=n,diem_danh[n];
-    for (int i = 0; i < check; i++)
+    int check[n]={0};
+    for (int i = 0; i < n; i++)
     {
-        diem_danh[i]=1;
-        for (int j = n-1; j > i; j--)
+        int dem=1;
+        if (!check[i])
         {
-            if (!strcmpi(hs[i].school,hs[j].school))
+            for (int j = i+1; j < n; j++)
             {
-                diem_danh[i]++;
-                check = j;
+                if(!stricmp(hs[i].school,hs[j].school))
+                {
+                    dem++;
+                    check[j]=1;
+                }
             }
         }
-        printf("\ntruong %s co %d hoc sinh.",hs[i].school,diem_danh[i]);
+        if(!check[i]) printf("\ntruong %s co %d hoc sinh.",hs[i].school,dem);
     }
-    
     return 0;
 }
