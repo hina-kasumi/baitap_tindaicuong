@@ -6,6 +6,7 @@
 #include<stdio.h>
 #include<math.h>
 #define endl printf("\n");
+const float PI = 3.14;
 
 void Output(float x, float y)
 {
@@ -43,19 +44,23 @@ int main()
     endl;
 
     //2,
-    float R;
+    float R, max = 0;
+    int count = 0;
     printf("nhap ban kinh cho duong tron tam O: ");
     scanf("%f",&R);
     for (int i = 0; i < n; i++)
     {
-        float khoang_cach = sqrt(pow(x[i]))
-        if ()
+        float khoang_cach = sqrt(pow(x[i], 2)+ pow(y[i], 2));
+        if (khoang_cach < R)
         {
-            
+            count++;
+            Output(x[i], y[i]);
         }
-        
+        max = (max < khoang_cach)? khoang_cach:max;
     }
-    
+    printf("co %d diem nam trong duong tron tamO ban kinh %f\n\n", count, R);
+    //3,
+    printf("dien tich duong tron nho nhat chua toan bo diem = %f", PI * max * max);
 
 
     return 0;
