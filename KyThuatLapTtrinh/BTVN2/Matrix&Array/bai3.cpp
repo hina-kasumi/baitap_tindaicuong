@@ -1,4 +1,5 @@
-/*Bài 3. Nhập vào một dãy số nguyên có n phần tử, kiểm tra xem dãy có đang tăng dần hay ko.
+/*Bài 3. Nhập vào một dãy số nguyên có n phần tử, 
+kiểm tra xem dãy có đang tăng dần hay ko.
 Tìm giá trị chẵn lớn nhất của dãy số
 Tìm giá trị nhỏ nhất của |a1|, |a2|,…, |an|
 Tìm max của a[1], a[2]/2, a[3]/3, …, a[n]/n
@@ -97,7 +98,7 @@ int AbsMin(int *arr, int n){
 
 //Tìm max của a[1], a[2]/2, a[3]/3, …, a[n]/n
 float Max (int *arr, int n){
-    float max = *arr;
+    float max = (float)*arr;
     for (int i = 1; i < n; i++)
     {
         float tmp = 1.0*(*(arr + i))/(i + 1);
@@ -135,5 +136,7 @@ int main()
     //Tìm max của a[1], a[2]/2, a[3]/3, …, a[n]/n
     printf("gia tri lon nhat theo a[n]/n = %.2f", Max(arr, n));
     
+    //giải phóng bộ nhớ
+    free(arr);
     return 0;
 }

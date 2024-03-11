@@ -86,6 +86,7 @@ float *Plus (float *P, float *Q, int n, int m){
         else if (n < m) *(result + i) = *(Q + i);
     }
     
+    free(result);
     return result;
 }
 
@@ -141,5 +142,6 @@ int main()
     
     //giải phóng bộ nhớ mảng heso mà mình đã xin
     free(heso);
+    free(heso_Q);
     return 0;
 }
