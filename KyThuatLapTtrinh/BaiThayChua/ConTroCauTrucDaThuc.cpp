@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
+#include<math.h>
 struct DaThuc{
 	int n;
 	float *a;
