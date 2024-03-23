@@ -66,5 +66,5 @@ int main(){
 //	timSach(n, s, "A");
 //	maxSach(n, s);
 	for(int i=0;i<n;i++)
-		printf("\nGia: %.2f", s[i].tien);
+		printf("\nGia: %.2f", s[i].gia);
 }
