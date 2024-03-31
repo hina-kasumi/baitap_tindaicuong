@@ -114,23 +114,39 @@ int DongLonNhat(int **matrix, int n){
     return Dir(tongDong, n);
 }
 
+void Sort(int *arr, int n){
+    for (int i = 0; i < n - 1; i++)
+    {
+        for (int j = i + 1; j < n; j++)
+        {
+            if(*(arr + i) > *(arr + j))
+            {
+                int tmp = *(arr + i);
+                *(arr + i) = *(arr + j);
+                *(arr + j) = tmp;
+            }
+        }
+    }
+}
 void Sort(int **matrix, int n){
+    int *arr = (int*) malloc((n * n) * sizeof(int));
+    int tmp = 0;
     for (int i = 0; i < n; i++)
     {
         for (int j = 0; j < n; j++)
         {
-            for (int k = i; k < n; k++)
-            {
-                for (int m = j; m < n; m++)
-                {
-                    if (*(*(matrix + i) + j) > *(*(matrix + k) + m))
-                    {
-                        int tmp = *(*(matrix + i) + j);
-                        *(*(matrix + i) + j) = *(*(matrix + k) + m);
-                        *(*(matrix + k) + m) = tmp;
-                    }
-                }
-            }
+            *(arr + tmp) = *(*(matrix + i) + j);
+            tmp++;
+        }
+    }
+    Sort(arr, n*n);
+    tmp = 0;
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+           *(*(matrix + i) + j) = *(arr + tmp);
+           tmp++;
         }
     }
 }
@@ -180,5 +196,11 @@ int main()
         free(*matrix + i);
     }
     return 0;
+    /*
+    4
+    2 6 8 3
+    4 6 1 7
+    88 5 3 1
+    6 3 4 5*/
 }
 
