@@ -1,0 +1,13 @@
+3
+1
+hieu
+500000
+chuyen mon
+2
+duong
+200000
+A
+3
+manh
+343243
+A

@@ -1,0 +1,13 @@
+danh sach nhan vien:
+1|      hieu| 500000.00|chuyen mon
+2|     duong| 200000.00|         A
+3|      manh| 343243.00|         A
+
+luong trung binh cua cac phong ban la:
+chuyen mon: 500000.000
+A: 271621.500
+
+danh sach nhan vien sau khi sap xep la:
+1|      hieu| 500000.00|chuyen mon
+3|      manh| 343243.00|         A
+2|     duong| 200000.00|         A
