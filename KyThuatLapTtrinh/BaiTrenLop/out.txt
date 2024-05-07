@@ -1,4 +1,9 @@
-6 3 2 9 7 
-3 4 1 2 7 
-5 6 7 3 2 
-5 5 8 8 1 
+danh sach nhanh vien:
+         1|      hieu|100000.000|A
+         2|      hina|1000000.000|B
+         3|nguyen chim to| 50000.000|C
+phong co luong thap nhat la: C
+sau khi xep theo luong:
+         2|      hina|1000000.000|B
+         1|      hieu|100000.000|A
+         3|nguyen chim to| 50000.000|C
