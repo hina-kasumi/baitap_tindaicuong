@@ -1,0 +1,25 @@
+4
+1
+Ha Noi
+HoChiMinh
+7 0 0
+10 0 0
+A
+2
+Hue
+Thanh Hoa
+1 30 0
+3 0 0
+C
+3
+Nam Dinh
+Bac Ninh
+22 45 0
+5 15 0
+B
+4
+Nam Dinh
+Bac Ninh
+1 30 0
+2 45 0
+A
