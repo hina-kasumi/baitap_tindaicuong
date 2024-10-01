@@ -2,7 +2,6 @@
 using namespace std;
 
 class DaThuc {
-private:
     int n;
     float *arr;
 public:
@@ -11,6 +10,7 @@ public:
         arr = new float[n + 1];
     }
 
+    friend float giaTri(const DaThuc& dt, float x);
 
     friend istream &operator>>(istream& is, DaThuc &a){
         is >> a.n;
@@ -51,6 +51,14 @@ public:
     }
 };
 
+float giaTri(const DaThuc& dt, float x){
+    float res = 0;
+    for (int i = 0; i <= dt.n; i++) {
+        res += dt.arr[i] * pow(x, i);
+    }
+    return res;
+}
+
 signed main()
 {
     DaThuc a, b;
@@ -58,6 +66,9 @@ signed main()
     cout << a << endl << b << endl;
     a = b;
     cout << a << endl << b << endl;
-    cout << a + b;
+    cout << a + b << endl;
+    int x;
+    cin >> x;
+    cout << giaTri(a, x);
     return 0;
 }
